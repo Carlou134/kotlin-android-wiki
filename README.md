@@ -20,7 +20,7 @@ Cada carpeta es una etapa con su propio `README.md` (orden de lectura y mapa de 
 | [08. POO avanzada](08-poo-avanzada/README.md) | Herencia, interfaces, `sealed`, extension functions, `value class`, `object` |
 | [09. Funcional](09-funcional/README.md) | Lambdas, funciones de alcance, `inline` |
 | [10. Corrutinas](10-corrutinas/README.md) | `suspend`, scopes, dispatchers, concurrencia estructurada |
-| 11. Serialización y tiempo *(pendiente)* | kotlinx.serialization, kotlinx.datetime |
+| [11. Serialización y tiempo](11-serializacion-y-tiempo/README.md) | kotlinx.serialization, kotlinx.datetime |
 | [12. Arquitectura](12-arquitectura/README.md) | SOLID, hexagonal, DDD, composition root, use cases, Konsist |
 | [13. HTTP y APIs](13-http-y-apis/README.md) | HTTP a fondo, REST, paginación, OpenAPI |
 | [14. Ktor y Koin](14-ktor-y-koin/README.md) | Plugins, StatusPages, rutas con auth, DI |

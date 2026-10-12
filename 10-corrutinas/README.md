@@ -68,4 +68,4 @@ Jobs programados         ->  "repetir algo cada X tiempo"
 
 ## Después de esta carpeta
 
-Ya sabes ejecutar trabajo concurrente sin perder el control. Vuelve al índice: [README principal](../README.md).
+Ya sabes ejecutar trabajo concurrente sin perder el control. Lo próximo es [Serialización y tiempo](../11-serializacion-y-tiempo/README.md). Vuelve al índice: [README principal](../README.md).
