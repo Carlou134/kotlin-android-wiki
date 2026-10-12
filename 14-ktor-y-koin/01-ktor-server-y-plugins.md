@@ -111,7 +111,7 @@ install(CallId) {
 }
 ```
 
-Con ese ID puedes seguir una petición por todos los logs, incluso entre servicios. Se profundiza en `18-observabilidad`.
+Con ese ID puedes seguir una petición por todos los logs, incluso entre servicios. Se profundiza en [Correlation ID](../18-observabilidad/02-correlation-id.md).
 
 ### CallLogging: una línea de log por petición
 
