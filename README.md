@@ -22,7 +22,7 @@ Cada carpeta es una etapa con su propio `README.md` (orden de lectura y mapa de 
 | [10. Corrutinas](10-corrutinas/README.md) | `suspend`, scopes, dispatchers, concurrencia estructurada |
 | 11. Serialización y tiempo *(pendiente)* | kotlinx.serialization, kotlinx.datetime |
 | [12. Arquitectura](12-arquitectura/README.md) | SOLID, hexagonal, DDD, composition root, use cases, Konsist |
-| 13. HTTP y APIs *(pendiente)* | HTTP a fondo, REST, paginación, OpenAPI |
+| [13. HTTP y APIs](13-http-y-apis/README.md) | HTTP a fondo, REST, paginación, OpenAPI |
 | [14. Ktor y Koin](14-ktor-y-koin/README.md) | Plugins, StatusPages, rutas con auth, DI |
 | [15. Persistencia](15-persistencia/README.md) | SQL, transacciones, Postgres, Exposed, Flyway, bloqueos |
 | [16. Seguridad](16-seguridad/README.md) | Argon2id, JWT, JWKS, refresh tokens, RBAC, AES-GCM, presigned URLs |

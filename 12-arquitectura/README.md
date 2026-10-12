@@ -72,4 +72,4 @@ Tests de arquitectura ->  "las reglas se verifican, no se recuerdan"
 
 ## Después de esta carpeta
 
-Ya sabes dónde va cada pieza. Lo próximo es ver por dónde entra el mundo exterior a tu sistema: `13-http-y-apis`. Vuelve al índice: [README principal](../README.md).
+Ya sabes dónde va cada pieza. Lo próximo es ver por dónde entra el mundo exterior a tu sistema: [HTTP y APIs](../13-http-y-apis/README.md). Vuelve al índice: [README principal](../README.md).

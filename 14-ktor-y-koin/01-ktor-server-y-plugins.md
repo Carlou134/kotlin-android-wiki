@@ -137,7 +137,7 @@ install(CORS) {
 }
 ```
 
-Nunca uses `anyHost()` en producción para una API con autenticación. CORS se explica a fondo en `13-http-y-apis`.
+Nunca uses `anyHost()` en producción para una API con autenticación. CORS se explica a fondo en [HTTP a fondo](../13-http-y-apis/01-http-a-fondo.md).
 
 ### Authentication
 

@@ -118,4 +118,4 @@ Una regla con muchas excepciones genera ruido y el equipo termina ignorándola. 
 
 ## Siguiente lección
 
-Terminaste la arquitectura. Lo próximo es la puerta de entrada al sistema: `13-http-y-apis`. Vuelve al índice: [README principal](../README.md).
+Terminaste la arquitectura. Lo próximo es la puerta de entrada al sistema: [HTTP y APIs](../13-http-y-apis/README.md). Vuelve al índice: [README principal](../README.md).
