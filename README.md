@@ -28,7 +28,7 @@ Cada carpeta es una etapa con su propio `README.md` (orden de lectura y mapa de 
 | [16. Seguridad](16-seguridad/README.md) | Argon2id, JWT, JWKS, refresh tokens, RBAC, AES-GCM, presigned URLs |
 | [17. Resiliencia e integraciones](17-resiliencia-e-integraciones/README.md) | Backoff, idempotencia, Ktor Client, Redis, S3, SMTP |
 | 18. Observabilidad *(pendiente)* | Logging estructurado, correlation ID, métricas |
-| 19. Testing *(pendiente)* | Kotest, MockK, Testcontainers, `testApplication`, calidad |
+| [19. Testing](19-testing/README.md) | Kotest, MockK, Testcontainers, `testApplication`, calidad |
 | 20. Build y DevOps *(pendiente)* | Gradle, convention plugins, Docker, Git, CI |
 
 Las etapas de Android (Compose, Room, WorkManager) continúan desde `21-...`.

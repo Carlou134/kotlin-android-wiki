@@ -181,7 +181,7 @@ O con un `join` si lo necesitas en una sola consulta.
 
 ## Exposed y los tests
 
-`SchemaUtils.create(PedidosTable)` crea la tabla a partir del objeto. Es útil en un prototipo, pero en producción y en los tests de integración conviene correr **las mismas migraciones de Flyway** contra un Postgres real (Testcontainers, en `19-testing`). Si no, el test prueba un esquema distinto al real.
+`SchemaUtils.create(PedidosTable)` crea la tabla a partir del objeto. Es útil en un prototipo, pero en producción y en los tests de integración conviene correr **las mismas migraciones de Flyway** contra un Postgres real ([Testcontainers](../19-testing/03-testcontainers.md)). Si no, el test prueba un esquema distinto al real.
 
 -----
 

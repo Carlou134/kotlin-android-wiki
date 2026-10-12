@@ -12,7 +12,7 @@ Conviene que ya sepas:
 
 * Las capas y la regla de dependencia: [Arquitectura hexagonal](02-arquitectura-hexagonal.md).
 * Las convenciones de nombres: [La capa application](05-capa-application.md).
-* Lo básico de un test con Kotest (se ve en `19-testing`).
+* Lo básico de un test con Kotest: [Kotest](../19-testing/01-kotest.md).
 
 Palabras nuevas (también están en el [Glosario](Glosario.md)):
 
