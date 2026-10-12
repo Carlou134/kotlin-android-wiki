@@ -63,4 +63,4 @@ value class / object   ->  "tipos sin costo y objetos únicos"
 
 ## Después de esta carpeta
 
-Ya sabes modelar con tipos. Lo próximo es la programación funcional: lambdas, funciones de alcance e `inline`, en `09-funcional`. Vuelve al índice: [README principal](../README.md).
+Ya sabes modelar con tipos. Lo próximo es la [programación funcional](../09-funcional/README.md): lambdas, funciones de alcance e `inline`. Vuelve al índice: [README principal](../README.md).

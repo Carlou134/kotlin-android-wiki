@@ -165,4 +165,4 @@ data class DbConfig(val url: String, val usuario: String) {
 
 ## Siguiente lección
 
-Terminaste la POO avanzada. Lo próximo es la programación funcional en `09-funcional`. Vuelve al índice: [README principal](../README.md).
+Terminaste la POO avanzada. Lo próximo es la [programación funcional](../09-funcional/README.md). Vuelve al índice: [README principal](../README.md).
