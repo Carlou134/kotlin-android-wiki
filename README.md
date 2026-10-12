@@ -24,7 +24,7 @@ Cada carpeta es una etapa con su propio `README.md` (orden de lectura y mapa de 
 | [12. Arquitectura](12-arquitectura/README.md) | SOLID, hexagonal, DDD, composition root, use cases, Konsist |
 | 13. HTTP y APIs *(pendiente)* | HTTP a fondo, REST, paginación, OpenAPI |
 | 14. Ktor y Koin *(pendiente)* | Plugins, StatusPages, rutas con auth, DI |
-| 15. Persistencia *(pendiente)* | SQL, transacciones, Postgres, Exposed, Flyway, bloqueos |
+| [15. Persistencia](15-persistencia/README.md) | SQL, transacciones, Postgres, Exposed, Flyway, bloqueos |
 | 16. Seguridad *(pendiente)* | Argon2id, JWT, JWKS, refresh tokens, RBAC, AES-GCM, presigned URLs |
 | 17. Resiliencia e integraciones *(pendiente)* | Backoff, idempotencia, Ktor Client, Redis, S3, SMTP |
 | 18. Observabilidad *(pendiente)* | Logging estructurado, correlation ID, métricas |
