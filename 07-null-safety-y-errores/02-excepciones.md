@@ -236,4 +236,4 @@ Buen código no es el que nunca falla. Buen código es el que sabe qué hacer cu
 
 ## Siguiente lección
 
-Terminaste los fundamentos de Kotlin. Vuelve al índice: [README principal](../README.md).
+Terminaste los fundamentos de Kotlin. Sigue con [POO avanzada](../08-poo-avanzada/README.md), o vuelve al índice: [README principal](../README.md).

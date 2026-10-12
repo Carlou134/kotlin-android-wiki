@@ -53,4 +53,4 @@ Excepciones  ->  "¿qué hago si algo falla al ejecutar?"
 
 ## Después de esta carpeta
 
-Con esta carpeta terminas los fundamentos de sintaxis de Kotlin. Lo próximo que aprendas va en una nueva carpeta numerada `08-...`. Vuelve al índice: [README principal](../README.md).
+Con esta carpeta terminas los fundamentos de sintaxis de Kotlin. Lo próximo es [POO avanzada](../08-poo-avanzada/README.md). Vuelve al índice: [README principal](../README.md).
