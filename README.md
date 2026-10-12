@@ -19,7 +19,7 @@ Cada carpeta es una etapa con su propio `README.md` (orden de lectura y mapa de 
 | [07. Null safety y errores](07-null-safety-y-errores/README.md) | Tipos nulables, `?.`, `?:` y excepciones |
 | 08. POO avanzada *(pendiente)* | Interfaces, `sealed`, extension functions, `value class` |
 | 09. Funcional *(pendiente)* | Lambdas, funciones de alcance, `inline` |
-| 10. Corrutinas *(pendiente)* | `suspend`, scopes, dispatchers, concurrencia estructurada |
+| [10. Corrutinas](10-corrutinas/README.md) | `suspend`, scopes, dispatchers, concurrencia estructurada |
 | 11. Serialización y tiempo *(pendiente)* | kotlinx.serialization, kotlinx.datetime |
 | [12. Arquitectura](12-arquitectura/README.md) | SOLID, hexagonal, DDD, composition root, use cases, Konsist |
 | 13. HTTP y APIs *(pendiente)* | HTTP a fondo, REST, paginación, OpenAPI |
