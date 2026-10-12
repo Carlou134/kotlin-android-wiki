@@ -132,7 +132,7 @@ WHERE id = 't1' AND usado_en IS NULL;
 ```
 
 * 1 fila afectada: eras el primero, el token es válido.
-* 0 filas afectadas: alguien ya lo usó. Si llegan dos peticiones con el mismo token al mismo tiempo, **solo una** gana, sin bloqueos y sin carreras. Esto se usa para detectar la reutilización de tokens en `16-seguridad`.
+* 0 filas afectadas: alguien ya lo usó. Si llegan dos peticiones con el mismo token al mismo tiempo, **solo una** gana, sin bloqueos y sin carreras. Esto se usa para detectar la reutilización de tokens en [Refresh tokens](../16-seguridad/04-refresh-tokens.md).
 
 ## ¿Pesimista u optimista?
 

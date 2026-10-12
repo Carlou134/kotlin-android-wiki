@@ -143,7 +143,7 @@ Del más barato al más caro, para fallar lo antes posible:
 5. koverVerify       segundos    ¿la cobertura alcanza el mínimo?
 ```
 
-Si el formato está mal, no tiene sentido esperar 5 minutos de tests para enterarse. Lo armas en el CI en `20-build-y-devops`.
+Si el formato está mal, no tiene sentido esperar 5 minutos de tests para enterarse. Lo armas en el CI en [GitLab CI](../20-build-y-devops/05-gitlab-ci.md).
 
 **En tu máquina:** antes de subir cambios, corre al menos `ktlintFormat`, `detekt` y los tests del módulo que tocaste. Que el CI falle por formato es tiempo perdido para todo el equipo.
 

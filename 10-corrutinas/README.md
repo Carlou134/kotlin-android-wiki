@@ -6,7 +6,7 @@ En esta carpeta aprendes a escribir código **asíncrono** que se lee como si fu
 
 ## Antes de empezar
 
-Conviene que ya hayas leído [Funciones](../05-funciones/README.md) (sobre todo lambdas) y [Null safety y errores](../07-null-safety-y-errores/README.md), porque la cancelación funciona con excepciones. Las funciones de orden superior y las lambdas con receptor se ven a fondo en `09-funcional`.
+Conviene que ya hayas leído [Funciones](../05-funciones/README.md) (sobre todo lambdas) y [Null safety y errores](../07-null-safety-y-errores/README.md), porque la cancelación funciona con excepciones. Las funciones de orden superior y las lambdas con receptor se ven a fondo en [Programación funcional](../09-funcional/README.md).
 
 Si en algún momento aparece una palabra que no conoces, búscala en el [Glosario](Glosario.md).
 

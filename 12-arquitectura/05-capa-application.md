@@ -12,7 +12,7 @@ Conviene que ya sepas:
 
 * Las capas y los puertos: [Arquitectura hexagonal](02-arquitectura-hexagonal.md).
 * Excepciones y cuándo usarlas: [Excepciones](../07-null-safety-y-errores/02-excepciones.md).
-* `sealed interface` y `when` exhaustivo (se ve en `08-poo-avanzada`).
+* `sealed interface` y `when` exhaustivo: [Clases e interfaces selladas](../08-poo-avanzada/02-sealed.md).
 
 Palabras nuevas (también están en el [Glosario](Glosario.md)):
 

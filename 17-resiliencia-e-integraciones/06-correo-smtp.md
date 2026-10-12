@@ -89,7 +89,7 @@ Mailpit es un servidor SMTP que **no envía nada**: atrapa cada email y lo muest
 * SMTP en el puerto `1025`, sin autenticación.
 * Interfaz web en `http://localhost:8025`.
 
-Puedes probar todo el flujo de alertas o de recuperación de contraseña sin riesgo de mandar un email a un cliente real. Mailpit también tiene una API HTTP, útil para verificar en tests de integración que el email salió. Se levanta con docker-compose (`20-build-y-devops`).
+Puedes probar todo el flujo de alertas o de recuperación de contraseña sin riesgo de mandar un email a un cliente real. Mailpit también tiene una API HTTP, útil para verificar en tests de integración que el email salió. Se levanta con docker-compose ([Docker y docker-compose](../20-build-y-devops/03-docker-y-docker-compose.md)).
 
 ## Nunca dentro de una transacción
 

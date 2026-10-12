@@ -111,7 +111,7 @@ interface AlmacenamientoArchivos {
 }
 ```
 
-El use case decide **quién** puede acceder y **qué** key corresponde; el adapter de S3 solo firma. En desarrollo local, el mismo adapter apunta a MinIO (lo verás en `20-build-y-devops`, con docker-compose).
+El use case decide **quién** puede acceder y **qué** key corresponde; el adapter de S3 solo firma. En desarrollo local, el mismo adapter apunta a MinIO (lo verás en [Docker y docker-compose](../20-build-y-devops/03-docker-y-docker-compose.md)).
 
 -----
 

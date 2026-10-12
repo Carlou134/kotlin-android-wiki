@@ -6,7 +6,7 @@ En esta carpeta aprendes a **organizar un backend para que la lógica de negocio
 
 ## Antes de empezar
 
-Conviene que ya hayas leído [Programación orientada a objetos](../06-poo/README.md) y [Null safety y errores](../07-null-safety-y-errores/README.md). También usas interfaces, `sealed interface` y extension functions, que se ven en `08-poo-avanzada`.
+Conviene que ya hayas leído [Programación orientada a objetos](../06-poo/README.md) y [Null safety y errores](../07-null-safety-y-errores/README.md). También usas interfaces, `sealed interface` y extension functions, que se ven en [POO avanzada](../08-poo-avanzada/README.md).
 
 Si en algún momento aparece una palabra que no conoces, búscala en el [Glosario](Glosario.md).
 

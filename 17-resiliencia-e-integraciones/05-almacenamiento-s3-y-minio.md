@@ -120,7 +120,7 @@ Es más confiable que un job propio, porque lo hace el almacenamiento.
 
 ## En local: MinIO
 
-MinIO corre en un contenedor y expone la API de S3 (puerto 9000) y una consola web (puerto 9001). Un contenedor auxiliar crea los buckets al arrancar. Lo armas en `20-build-y-devops`, con docker-compose.
+MinIO corre en un contenedor y expone la API de S3 (puerto 9000) y una consola web (puerto 9001). Un contenedor auxiliar crea los buckets al arrancar. Lo armas en [Docker y docker-compose](../20-build-y-devops/03-docker-y-docker-compose.md).
 
 ## Detrás de un puerto
 

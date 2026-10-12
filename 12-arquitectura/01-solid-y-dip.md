@@ -11,7 +11,7 @@ SOLID son cinco principios para que el código se pueda cambiar sin romper otras
 Conviene que ya sepas:
 
 * Crear clases y pasarles datos por constructor: [Clases](../06-poo/01-clases.md).
-* Qué es una interfaz (se ve en `08-poo-avanzada`): un contrato con funciones sin implementar.
+* Qué es una interfaz: un contrato con funciones sin implementar ([Herencia e interfaces](../08-poo-avanzada/01-herencia-e-interfaces.md)).
 
 Palabras nuevas (también están en el [Glosario](Glosario.md)):
 
