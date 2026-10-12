@@ -192,7 +192,7 @@ lanzarJobPeriodico("sincronizacion", 1.minutes) {
 **La trampa del lease:** si el trabajo tarda **más** que el lease (una pausa larga de la JVM, una API lenta), el lease vence, otra instancia lo toma y por un momento trabajan **dos**. Defensas:
 
 * Dura más que el trabajo esperado, y **renuévalo** durante trabajos largos (otro CAS que exige `dueno = yo`).
-* Haz que el trabajo sea **idempotente**, para que correr dos veces no cause daño (`17-resiliencia-e-integraciones`).
+* Haz que el trabajo sea **idempotente**, para que correr dos veces no cause daño ([Idempotencia](../17-resiliencia-e-integraciones/02-idempotencia.md)).
 
 **Alternativa en Postgres:** los *advisory locks* (`pg_try_advisory_lock`) son locks con nombre que no dependen de una tabla. Pero están atados a la **conexión**, y con un pool de conexiones eso es delicado: si se devuelve la conexión al pool sin liberarlo, el lock queda tomado. El lease en una tabla es más explícito y más fácil de inspeccionar.
 

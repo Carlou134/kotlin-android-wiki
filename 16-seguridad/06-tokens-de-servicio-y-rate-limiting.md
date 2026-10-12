@@ -105,7 +105,7 @@ routing {
 
 ## Límites por instancia vs límites globales
 
-El plugin de Ktor cuenta **en memoria**. Con 3 instancias detrás de un balanceador, el límite real es el triple. Para un límite global, el contador tiene que vivir en un lugar compartido, típicamente **Redis** (`17-resiliencia-e-integraciones`).
+El plugin de Ktor cuenta **en memoria**. Con 3 instancias detrás de un balanceador, el límite real es el triple. Para un límite global, el contador tiene que vivir en un lugar compartido, típicamente **Redis** ([Redis](../17-resiliencia-e-integraciones/04-redis.md)).
 
 ## Qué limitar y cómo
 

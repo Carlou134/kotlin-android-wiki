@@ -113,7 +113,7 @@ Opciones:
 | Lock en la base de datos | Antes de trabajar, cada instancia intenta tomar un lock o un *lease*; solo la que lo consigue trabaja | Más código, pero tolera caídas |
 | Trabajo idempotente | El trabajo es seguro aunque corra dos veces | No siempre es posible (emails) |
 
-El **lease** (un lock con fecha de vencimiento guardado en una tabla) es la solución más robusta, y se ve en la etapa de persistencia, junto con el bloqueo optimista. La idempotencia se ve en `17-resiliencia-e-integraciones`.
+El **lease** (un lock con fecha de vencimiento guardado en una tabla) es la solución más robusta, y se ve en la etapa de persistencia, junto con el bloqueo optimista. La idempotencia se ve en [Idempotencia](../17-resiliencia-e-integraciones/02-idempotencia.md).
 
 ## Jitter: que no arranquen todos juntos
 
