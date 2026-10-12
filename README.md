@@ -17,8 +17,21 @@ Cada carpeta es una etapa con su propio `README.md` (orden de lectura y mapa de 
 | [05. Funciones](05-funciones/README.md) | Funciones, argumentos, lambdas y recursión |
 | [06. Programación orientada a objetos](06-poo/README.md) | Clases, getters/setters, data classes y enums |
 | [07. Null safety y errores](07-null-safety-y-errores/README.md) | Tipos nulables, `?.`, `?:` y excepciones |
+| 08. POO avanzada *(pendiente)* | Interfaces, `sealed`, extension functions, `value class` |
+| 09. Funcional *(pendiente)* | Lambdas, funciones de alcance, `inline` |
+| 10. Corrutinas *(pendiente)* | `suspend`, scopes, dispatchers, concurrencia estructurada |
+| 11. Serialización y tiempo *(pendiente)* | kotlinx.serialization, kotlinx.datetime |
+| [12. Arquitectura](12-arquitectura/README.md) | SOLID, hexagonal, DDD, composition root, use cases, Konsist |
+| 13. HTTP y APIs *(pendiente)* | HTTP a fondo, REST, paginación, OpenAPI |
+| 14. Ktor y Koin *(pendiente)* | Plugins, StatusPages, rutas con auth, DI |
+| 15. Persistencia *(pendiente)* | SQL, transacciones, Postgres, Exposed, Flyway, bloqueos |
+| 16. Seguridad *(pendiente)* | Argon2id, JWT, JWKS, refresh tokens, RBAC, AES-GCM, presigned URLs |
+| 17. Resiliencia e integraciones *(pendiente)* | Backoff, idempotencia, Ktor Client, Redis, S3, SMTP |
+| 18. Observabilidad *(pendiente)* | Logging estructurado, correlation ID, métricas |
+| 19. Testing *(pendiente)* | Kotest, MockK, Testcontainers, `testApplication`, calidad |
+| 20. Build y DevOps *(pendiente)* | Gradle, convention plugins, Docker, Git, CI |
 
-Las próximas etapas continúan la numeración (`08-...`) siguiendo la hoja de ruta de abajo.
+Las etapas de Android (Compose, Room, WorkManager) continúan desde `21-...`.
 
 ---
 
