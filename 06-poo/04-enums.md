@@ -244,4 +244,4 @@ Si un dato solo puede tener ciertos valores concretos, NO lo dejes como string s
 
 ## Siguiente lección
 
-Terminaste esta carpeta. Sigue con la siguiente: [Null safety y errores](../07-null-safety-y-errores/README.md).
+[5. Visibilidad y encapsulamiento](05-visibilidad-y-encapsulamiento.md): `private`, `protected`, `internal` y cómo proteger el estado de tus objetos.

@@ -15,7 +15,7 @@ Cada carpeta es una etapa con su propio `README.md` (orden de lectura y mapa de 
 | [03. Colecciones](03-colecciones/README.md) | Listas, sets y maps |
 | [04. Control de flujo](04-control-de-flujo/README.md) | Condicionales, `when`, rangos y bucles |
 | [05. Funciones](05-funciones/README.md) | Funciones, argumentos, lambdas y recursión |
-| [06. Programación orientada a objetos](06-poo/README.md) | Clases, getters/setters, data classes y enums |
+| [06. Programación orientada a objetos](06-poo/README.md) | Clases, getters/setters, data classes, enums y visibilidad |
 | [07. Null safety y errores](07-null-safety-y-errores/README.md) | Tipos nulables, `?.`, `?:` y excepciones |
 | [08. POO avanzada](08-poo-avanzada/README.md) | Herencia, interfaces, `sealed`, extension functions, `value class`, `object` |
 | [09. Funcional](09-funcional/README.md) | Lambdas, `it`, funciones de alcance, `inline`, callbacks |

@@ -36,11 +36,15 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **Receptor (receiver).** El tipo al que se le agrega una extensión; dentro de la función, es `this`.
 
+**Repository.** Interfaz que define cómo guardar, buscar y borrar datos, sin decir dónde se guardan. Sus implementaciones se nombran por su mecanismo: `InMemoryEmailRepository`, `PostgresEmailRepository`.
+
 **Resolución estática.** La extensión que se ejecuta se decide por el tipo declarado de la variable, al compilar, no por el objeto real.
 
 **Singleton.** Un tipo del que existe una sola instancia en todo el programa.
 
 **Smart cast.** Cuando Kotlin sabe el tipo concreto de una variable después de comprobarlo con `is`, y te deja usarla como ese tipo.
+
+**Stub.** Implementación vacía generada por el IDE (por ejemplo con `Alt + Enter` → *Implement members*), que después completas.
 
 **`value class`.** Clase que envuelve un único valor y, en la mayoría de los casos, no crea un objeto extra en tiempo de ejecución.
 

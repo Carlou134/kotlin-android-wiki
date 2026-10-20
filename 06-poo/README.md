@@ -1,6 +1,6 @@
 # Programación orientada a objetos
 
-En esta carpeta aprendes a **modelar cosas del mundo real** juntando datos y comportamiento en clases: cómo crearlas, cómo proteger sus propiedades, y dos tipos especiales que Kotlin te da listos: **data classes** y **enums**.
+En esta carpeta aprendes a **modelar cosas del mundo real** juntando datos y comportamiento en clases: cómo crearlas, cómo proteger sus propiedades, dos tipos especiales que Kotlin te da listos (**data classes** y **enums**) y cómo esconder lo interno con **visibilidad**.
 
 -----
 
@@ -22,6 +22,7 @@ Las lecciones se apoyan una en la otra, así que conviene leerlas en este orden:
 | [2. Getters y setters](02-getters-y-setters.md) | Setters y getters personalizados, `field` y propiedades calculadas | Clases |
 | [3. Data classes](03-data-classes.md) | Ventajas sobre clases normales: `==`, `copy()`, desestructuración, `hashCode()` y cuándo usarlas | Clases |
 | [4. Enums](04-enums.md) | Declarar enums, usarlos con `when`, propiedades, `entries` y conversión desde números | Clases y `when` |
+| [5. Visibilidad y encapsulamiento](05-visibilidad-y-encapsulamiento.md) | `public`, `private`, `protected`, `internal`, `private set` y por qué `private` no es seguridad | Clases y getters/setters |
 
 -----
 
@@ -41,6 +42,10 @@ Data classes       ->  "clases que solo guardan datos"
 
 Enums              ->  "un conjunto fijo de opciones"
    enum class Estado { NUEVO, LEIDO }   when (estado) { ... }   entries
+
+Visibilidad        ->  "escondo lo de adentro, expongo lo necesario"
+   class Cuenta(private var saldo: Double) { fun depositar(m: Double) { ... } }
+   var saldo = 0.0  private set
 ```
 
 -----
