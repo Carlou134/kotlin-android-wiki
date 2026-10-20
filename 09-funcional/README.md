@@ -1,6 +1,6 @@
 # Programación funcional
 
-En esta carpeta aprendes a **tratar las funciones como valores**: pasarlas como parámetros, devolverlas, transformar colecciones sin bucles, usar las funciones de alcance (`let`, `run`, `apply`, `also`, `with`) y entender qué hace `inline` y por qué existe. Es la base de todos los DSL que usas en Ktor, Koin y Exposed.
+En esta carpeta aprendes a **tratar las funciones como valores**: pasarlas como parámetros, devolverlas, entender qué es `it`, transformar colecciones sin bucles, usar las funciones de alcance (`let`, `run`, `apply`, `also`, `with`), entender qué hace `inline` y por qué existe, y pasar callbacks. Es la base de todos los DSL que usas en Ktor, Koin y Exposed.
 
 -----
 
@@ -21,6 +21,7 @@ Las lecciones se apoyan una en la otra, así que conviene leerlas en este orden:
 | [1. Funciones de orden superior](01-funciones-de-orden-superior.md) | Recibir y devolver funciones, trailing lambdas, `it`, referencias `::`, operaciones de colecciones y lambdas con receptor | Lambdas y extension functions |
 | [2. Funciones de alcance](02-funciones-de-alcance.md) | `let`, `run`, `with`, `apply`, `also`, `takeIf`: cuál usar y cuándo no usar ninguna | Lambdas con receptor |
 | [3. `inline`](03-inline.md) | El costo de las lambdas, `return` no local, etiquetas, `noinline`, `crossinline` y `reified` | Funciones de orden superior |
+| [4. Callbacks](04-callbacks.md) | `onSuccess` / `onError`, `onFound` / `onNotFound`, `_` para parámetros ignorados y el límite del callback hell | Funciones de orden superior |
 
 -----
 
@@ -43,6 +44,10 @@ Funciones de alcance ->  "ejecutar un bloque sobre un objeto"
 inline               ->  "copiar la lambda en el lugar de la llamada"
    lista.forEach { if (it == x) return }         // return sale de la función de afuera
    inline fun <reified T> leer(): T              // T disponible en tiempo de ejecución
+
+Callbacks            ->  "avisar el resultado en vez de decidir qué hacer"
+   fun enviar(email: Email, onSuccess: (Email) -> Unit, onError: (String) -> Unit)
+   enviar(email, onSuccess = { ... }, onError = { ... })
 ```
 
 -----

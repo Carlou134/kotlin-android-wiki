@@ -18,7 +18,7 @@ Cada carpeta es una etapa con su propio `README.md` (orden de lectura y mapa de 
 | [06. Programación orientada a objetos](06-poo/README.md) | Clases, getters/setters, data classes y enums |
 | [07. Null safety y errores](07-null-safety-y-errores/README.md) | Tipos nulables, `?.`, `?:` y excepciones |
 | [08. POO avanzada](08-poo-avanzada/README.md) | Herencia, interfaces, `sealed`, extension functions, `value class`, `object` |
-| [09. Funcional](09-funcional/README.md) | Lambdas, funciones de alcance, `inline` |
+| [09. Funcional](09-funcional/README.md) | Lambdas, `it`, funciones de alcance, `inline`, callbacks |
 | [10. Corrutinas](10-corrutinas/README.md) | `suspend`, scopes, dispatchers, concurrencia estructurada |
 | [11. Serialización y tiempo](11-serializacion-y-tiempo/README.md) | kotlinx.serialization, kotlinx.datetime |
 | [12. Arquitectura](12-arquitectura/README.md) | SOLID, hexagonal, DDD, composition root, use cases, Konsist |

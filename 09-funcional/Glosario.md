@@ -10,6 +10,10 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **Borrado de tipos (type erasure).** En la JVM, los tipos genéricos desaparecen al ejecutar: una `List<String>` es solo una `List`.
 
+**Callback.** Función que se pasa como argumento para que otra la ejecute cuando ocurra algo, como `onSuccess` u `onError`.
+
+**Callback hell.** Callbacks anidados dentro de callbacks hasta que el código se vuelve ilegible. Se evita con corrutinas o resultados `sealed`.
+
 **Closure.** Una lambda que recuerda las variables del lugar donde se creó.
 
 **`crossinline`.** Marca una lambda de una función `inline` que se ejecuta en otro contexto; prohíbe el `return` no local.
@@ -20,13 +24,19 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **Etiqueta (label).** Nombre que marca una lambda para hacer `return@nombre` desde adentro, como `return@forEach`.
 
+**`find`.** Devuelve el primer elemento que cumple una condición, o `null` si ninguno cumple. Es lo mismo que `firstOrNull`; `first` en cambio lanza una excepción.
+
+**`forEachIndexed`.** Como `forEach`, pero la lambda recibe dos parámetros: la posición y el elemento.
+
+**Función anónima.** Función sin nombre propio; una lambda es una función anónima.
+
 **Función de alcance.** Función de la librería estándar que ejecuta un bloque con un objeto como contexto: `let`, `run`, `with`, `apply`, `also`.
 
 **Función de orden superior.** Función que recibe otra función como parámetro o la devuelve.
 
 **`inline`.** Modificador que hace que el compilador copie el cuerpo de la función y de sus lambdas en cada llamada.
 
-**`it`.** Nombre implícito del parámetro cuando una lambda tiene uno solo.
+**`it`.** Nombre implícito del único parámetro de una lambda cuando no le pones nombre: `filter { it.total > 0 }` es `filter { pedido -> pedido.total > 0 }`. No es una palabra reservada, y no existe si la lambda tiene cero o dos o más parámetros.
 
 **Lambda con receptor.** Lambda en la que `this` es un objeto de un tipo dado, como `Menu.() -> Unit`.
 
@@ -51,5 +61,7 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 **Tipo de función.** La forma de una función: `(String) -> Boolean` recibe un `String` y devuelve un `Boolean`.
 
 **Trailing lambda.** Escribir la última lambda de una llamada fuera de los paréntesis.
+
+**`Unit`.** El tipo de las funciones que no devuelven nada útil: `() -> Unit` no recibe ni devuelve nada.
 
 **`with`.** Función de alcance que recibe el objeto como parámetro, lo usa como `this` y devuelve el resultado del bloque.

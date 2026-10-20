@@ -152,4 +152,4 @@ En la práctica, vas a **usar** muchas funciones inline y vas a **escribir** poc
 
 ## Siguiente lección
 
-Terminaste la programación funcional. Lo próximo es [Corrutinas](../10-corrutinas/README.md). Vuelve al índice: [README principal](../README.md).
+[4. Callbacks](04-callbacks.md): pasar "qué hacer si sale bien y qué hacer si sale mal".

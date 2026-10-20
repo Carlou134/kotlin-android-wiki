@@ -61,6 +61,23 @@ val p = Pedido(subtotal = 100.0, pais = "AR")
 println(p.totalConImpuestos(0.21)) // 121.0
 ```
 
+Una extensión también puede **cambiar** el objeto, si la propiedad es `var`:
+
+```kotlin
+data class Email(val asunto: String, val remitente: String, var leido: Boolean = false)
+
+fun Email.marcarComoLeido() {
+  leido = true                                   // this.leido = true
+  println("Email '$asunto' marcado como leído.")
+}
+
+val email = Email("Reunión", "jefe@empresa.com")
+email.marcarComoLeido()
+println(email.leido) // true
+```
+
+Ojo: la extensión vive **afuera** de la clase, así que solo ve lo que es público. Si `leido` fuera `private`, la extensión no podría tocarlo.
+
 ¿Por qué extender tu propia clase en vez de poner la función adentro? Para mantener la clase enfocada. `Pedido` modela un pedido; cómo se **muestra** o cómo se **convierte** a otro formato puede vivir en otro archivo, cerca de quien lo necesita.
 
 ## Extension properties
@@ -74,7 +91,36 @@ val String.iniciales: String
 println("ana lopez".iniciales) // AL
 ```
 
+Otro ejemplo, el dominio de un email:
+
+```kotlin
+val String.dominio: String
+  get() = substringAfter("@")
+
+println("juan@empresa.com".dominio) // empresa.com
+```
+
 Una extension property no puede guardar un valor: no tiene dónde, porque la clase no se modificó.
+
+## Ejemplos con texto
+
+Las extensiones sobre `String` son de las más útiles en el día a día:
+
+```kotlin
+fun String.capitalizar(): String =
+  lowercase().replaceFirstChar { it.uppercase() }
+
+fun String.contarPalabras(): Int =
+  split(Regex("\\s+")).count { it.isNotEmpty() }
+
+println("hOLA mundo kotlin".capitalizar())   // Hola mundo kotlin
+println("hola   mundo kotlin".contarPalabras()) // 3
+```
+
+Dos detalles si vienes de cursos o código más viejo:
+
+* **`toUpperCase()` y `toLowerCase()` están deprecadas** desde Kotlin 1.5. Las actuales son `uppercase()` y `lowercase()` (y `uppercaseChar()` para un `Char`).
+* **`split(" ")` solo corta por un espacio exacto.** Con dos espacios seguidos aparecen textos vacíos (por eso hay que filtrarlos), y un tab o un salto de línea no corta. `Regex("\\s+")` corta por cualquier cantidad de espacios en blanco.
 
 ## Receptor nulable
 
@@ -135,6 +181,7 @@ Se lee natural ("pedido a respuesta"), no necesita instanciar nada, y puede vivi
 
 * **Para lógica central de una clase tuya:** si la función usa el estado interno y es parte de lo que la clase **es**, va adentro como miembro.
 * **Para "todo":** cientos de extensiones sobre `String` repartidas en el proyecto vuelven imposible saber qué existe. Agrúpalas por tema y mantenlas cerca de su uso.
+* **Para cambiar el sentido de la clase:** una extensión debe sentirse natural en ese tipo. `"texto".esEmail()` tiene sentido; `"texto".guardarEnBaseDeDatos()` no: eso no es algo que un `String` "sepa hacer".
 * **Cuando necesitas polimorfismo:** las extensiones no se sobrescriben.
 
 ## Dónde lo vas a ver
