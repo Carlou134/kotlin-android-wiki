@@ -71,13 +71,13 @@ println("Longitud del correo: $longitudEmail") // Imprime: null
 
 `?.` significa:
 
-> ?Accede a esta propiedad solo si el valor no es null. Si es null, devuelve null sin romper el programa?.
+> "Accede a esta propiedad solo si el valor no es null. Si es null, devuelve null sin romper el programa".
 
 -----
 
 ## El operador Elvis `?:`
 
-A veces no quieres mostrar `null`, porque no es ?til para el usuario. Para eso existe el **operador Elvis** `?:`.
+A veces no quieres mostrar `null`, porque no es útil para el usuario. Para eso existe el **operador Elvis** `?:`.
 
 Sirve para definir un valor por defecto cuando algo es `null`:
 
@@ -89,9 +89,9 @@ val longitudEmail = emailOpcional?.length ?: 0
 println(longitudEmail) // Imprime: 0
 ```
 
-Se lee as?:
+Se lee así:
 
-> ?Si `emailOpcional?.length` tiene valor, ?salo. Si es `null`, usa `0`?.
+> "Si `emailOpcional?.length` tiene valor, úsalo. Si es `null`, usa `0`".
 
 Ejemplos comunes:
 
@@ -119,7 +119,7 @@ println(emailOpcional!!.length) // Lanza NullPointerException
 
 Esto es peligroso. Si el valor realmente es `null`, el programa se rompe.
 
-Regla pr?ctica: usa `!!` solo si est?s completamente seguro de que el valor existe. Y aun as?, la mayor?a de veces es mejor usar `?.` o `?:`.
+Regla práctica: usa `!!` solo si estás completamente seguro de que el valor existe. Y aun así, la mayoría de las veces es mejor usar `?.` o `?:`.
 
 -----
 
@@ -151,7 +151,7 @@ El programa no muestra `null`, no se rompe y comunica una respuesta clara.
 
 - `null` representa ausencia de valor.
 - `String` no acepta `null`.
-- `String?` s? acepta `null`.
+- `String?` sí acepta `null`.
 - `?.` permite acceder de forma segura a una propiedad.
 - `?:` da un valor por defecto si el resultado es `null`.
 - `!!` fuerza el acceso, pero puede lanzar `NullPointerException`.

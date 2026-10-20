@@ -246,7 +246,7 @@ val porcentajeEnviados = (enviados.toFloat() / (recibidos + enviados)) * 100
 println("$nombre tiene enviados $porcentajeEnviados% de sus correos")
 ```
 
-Por que usamos `toFloat()`? Porque si dividimos enteros, Kotlin puede perder los decimales. Al convertir `enviados` a `Float`, el cálculo mantiene la precisión necesaria para obtener el porcentaje correcto.
+¿Por qué usamos `toFloat()`? Porque si dividimos enteros, Kotlin puede perder los decimales. Al convertir `enviados` a `Float`, el cálculo mantiene la precisión necesaria para obtener el porcentaje correcto.
 
 -----
 
