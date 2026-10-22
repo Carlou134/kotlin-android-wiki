@@ -11,6 +11,7 @@ Una función `inline` le pide al compilador que **copie su cuerpo y el de sus la
 Conviene que ya sepas:
 
 * Funciones de orden superior y closures: [Funciones de orden superior](01-funciones-de-orden-superior.md).
+* Genéricos y `<T>`: [Genéricos](../08-poo-avanzada/05-genericos.md).
 
 Palabras nuevas (también están en el [Glosario](Glosario.md)):
 

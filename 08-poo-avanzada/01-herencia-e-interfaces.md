@@ -19,6 +19,7 @@ Palabras nuevas (también están en el [Glosario](Glosario.md)):
 * **`abstract`:** Clase que no se puede instanciar, o función sin cuerpo que las hijas deben implementar.
 * **`override`:** Palabra clave para reemplazar una función o propiedad heredada.
 * **Interfaz:** Contrato con funciones (y propiedades) que una clase se compromete a implementar.
+* **Composición:** Una clase que *tiene* otros objetos (en sus propiedades) y les delega trabajo, en vez de heredar de ellos.
 * **Polimorfismo:** Usar objetos de clases distintas a través de un mismo tipo, y que cada uno responda a su manera.
 * **Repository:** Interfaz que define cómo guardar, buscar y borrar datos, sin decir dónde se guardan.
 
@@ -67,6 +68,41 @@ class Circulo(val radio: Double) : Figura() {
 
 // val f = Figura()   ❌ no compila: no se puede instanciar una clase abstracta
 ```
+
+Una clase abstracta puede mezclar tres cosas:
+
+* **Miembros abstractos** (funciones o propiedades sin cuerpo): las hijas **deben** implementarlos con `override`. Si falta uno, no compila.
+* **Miembros concretos** (como `describir()`): las hijas los heredan ya hechos.
+* **Estado y constructor**: propiedades con valor que todas las hijas comparten.
+
+```kotlin
+abstract class BaseEmailNotifier(val remitente: String) {   // constructor y estado compartido
+  abstract val canal: String                                // propiedad abstracta
+  abstract fun notificar(email: String)                     // función abstracta
+
+  fun firma() = "Enviado por $remitente vía $canal"         // lógica común, ya resuelta
+}
+
+class ConsoleNotifier : BaseEmailNotifier("sistema@tienda.com") {
+  override val canal = "consola"
+
+  override fun notificar(email: String) {
+    println("Email recibido: $email")
+    println(firma())
+  }
+}
+
+fun main() {
+  val notifier = ConsoleNotifier()
+  notifier.notificar("ejemplo@correo.com")
+  // Email recibido: ejemplo@correo.com
+  // Enviado por sistema@tienda.com vía consola
+}
+```
+
+Fíjate en `BaseEmailNotifier("sistema@tienda.com")`: al heredar de una clase (abstracta o no) **se llama a su constructor**, por eso lleva paréntesis. Una interfaz no los lleva porque no tiene constructor.
+
+Los miembros abstractos ya son `open` implícitamente: no hace falta escribir `open abstract`.
 
 ## Interfaces: contratos
 
@@ -266,6 +302,41 @@ println(esEmail.esValido("ana@mail.com")) // true
 
 Regla práctica: **empieza por una interfaz**. Usa una clase abstracta solo si de verdad necesitas compartir estado o un constructor. En código moderno de Kotlin, las interfaces son mucho más comunes.
 
+### Herencia vs composición
+
+Heredar ata a la hija con el padre: recibe **todo** lo que el padre tiene, lo use o no. Si `BaseEmailRepository` crece con `exportarCsv()`, `sincronizar()` y `limpiarCache()`, todas las hijas cargan con eso, aunque a la mayoría no le sirva. Y como solo se hereda de **una** clase, ese lugar queda ocupado para siempre.
+
+La alternativa es la **composición**: en vez de *ser* algo, la clase *tiene* algo. Contratos chicos (interfaces) que cada clase implementa según lo que necesita, y objetos que recibe por constructor:
+
+```kotlin
+interface Guardable { fun guardar(email: String) }
+interface Exportable { fun exportarCsv(): String }
+
+// Solo implementa lo que usa
+class InMemoryEmailStore : Guardable {
+  private val emails = mutableListOf<String>()
+  override fun guardar(email: String) { emails.add(email) }
+}
+
+// Compone: TIENE un Guardable y un notificador, no hereda de ellos
+class EnvioDeEmails(
+  private val store: Guardable,
+  private val notifier: BaseEmailNotifier,
+) {
+  fun enviar(email: String) {
+    store.guardar(email)
+    notifier.notificar(email)
+  }
+}
+```
+
+Ojo con una confusión común: implementar una interfaz **no es** composición, sigue siendo una relación "es un" (`InMemoryEmailStore` *es un* `Guardable`). La composición es lo que hace `EnvioDeEmails`: guardar otros objetos en propiedades y delegarles el trabajo. Las interfaces la hacen posible, porque permiten que esas propiedades sean del tipo del contrato y no de una clase concreta.
+
+Para decidir:
+
+* **Clase abstracta:** las hijas forman una familia real ("es un tipo de...") y **todas** usan la lógica y el estado común.
+* **Interfaces chicas + composición:** quieres piezas intercambiables, sin jerarquías rígidas, donde cada clase toma solo lo que necesita.
+
 ## Ejercicio: un notificador intercambiable
 
 1. Crea una interfaz `EmailNotifier` con una función `notificar(email: Email)`.
@@ -305,10 +376,10 @@ En un backend con arquitectura hexagonal, **todos los puertos son interfaces**: 
 ## Resumen en 5 líneas
 
 1. En Kotlin las clases son `final` por defecto; `open` permite heredar y `override` reemplaza lo heredado.
-2. Una clase `abstract` no se instancia y obliga a las hijas a implementar sus funciones abstractas.
+2. Una clase `abstract` no se instancia, obliga a las hijas a implementar sus miembros abstractos y puede compartir estado, constructor y lógica común.
 3. Una interfaz es un contrato: dice qué sabe hacer un objeto, no qué es; puede tener funciones por defecto y propiedades.
 4. El polimorfismo permite trabajar con cualquier implementación a través del tipo de la interfaz; el patrón repository (`EmailRepository` + `InMemoryEmailRepository`) es el caso típico, y el tipo declarado limita lo que puedes usar.
-5. Una clase hereda de una sola clase pero implementa muchas interfaces; prefiere interfaces, y `fun interface` para contratos de una función.
+5. Una clase hereda de una sola clase pero implementa muchas interfaces; prefiere interfaces chicas y composición ("tiene un") sobre herencia ("es un"), y `fun interface` para contratos de una función.
 
 -----
 

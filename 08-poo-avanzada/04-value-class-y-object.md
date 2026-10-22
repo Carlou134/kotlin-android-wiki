@@ -165,4 +165,4 @@ data class DbConfig(val url: String, val usuario: String) {
 
 ## Siguiente lección
 
-Terminaste la POO avanzada. Lo próximo es la [programación funcional](../09-funcional/README.md). Vuelve al índice: [README principal](../README.md).
+[5. Genéricos](05-genericos.md): escribir una clase o función una vez y usarla con cualquier tipo.

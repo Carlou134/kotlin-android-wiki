@@ -6,7 +6,13 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **`abstract`.** Clase que no se puede instanciar, o función sin cuerpo que las clases hijas deben implementar.
 
+**Argumento de tipo.** El tipo concreto que llena el parámetro de tipo al usar un genérico, como `Email` en `Repository<Email>`.
+
+**Borrado de tipos (type erasure).** En la JVM, los tipos genéricos desaparecen al ejecutar: una `List<Email>` es solo una `List`.
+
 **Boxing.** Cuando Kotlin sí crea el objeto envoltorio de una `value class` (por ejemplo, al usarla como nulable o dentro de genéricos).
+
+**Composición.** Una clase que *tiene* otros objetos (en sus propiedades) y les delega trabajo, en vez de heredar de ellos. Relación "tiene un", frente al "es un" de la herencia.
 
 **`companion object`.** Objeto dentro de una clase cuyos miembros se usan con el nombre de la clase. Reemplaza a `static`.
 
@@ -20,6 +26,8 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **Función de fábrica.** Función que crea instancias, en vez de llamar al constructor directamente; suele validar antes de crear.
 
+**Genérico.** Clase, interfaz o función que recibe un tipo como parámetro (`<T>`) y se decide al usarla.
+
 **Herencia.** Mecanismo por el que una clase hija recibe las propiedades y funciones de una clase padre.
 
 **Interfaz.** Contrato con funciones (y propiedades) que una clase se compromete a implementar.
@@ -32,11 +40,15 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **`override`.** Palabra clave para reemplazar una función o propiedad heredada.
 
+**Parámetro de tipo.** El "hueco" para el tipo en un genérico, escrito entre `< >`. Por convención, `T`.
+
 **Polimorfismo.** Usar objetos de clases distintas a través de un mismo tipo, y que cada uno responda a su manera.
 
 **Receptor (receiver).** El tipo al que se le agrega una extensión; dentro de la función, es `this`.
 
 **Repository.** Interfaz que define cómo guardar, buscar y borrar datos, sin decir dónde se guardan. Sus implementaciones se nombran por su mecanismo: `InMemoryEmailRepository`, `PostgresEmailRepository`.
+
+**Restricción (upper bound).** Condición sobre un parámetro de tipo, como `<T : Identificable>`: solo acepta tipos que cumplan ese contrato.
 
 **Resolución estática.** La extensión que se ejecuta se decide por el tipo declarado de la variable, al compilar, no por el objeto real.
 

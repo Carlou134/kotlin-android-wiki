@@ -1,6 +1,6 @@
 # POO avanzada
 
-En esta carpeta aprendes las herramientas de Kotlin para **modelar con tipos**: contratos que varias clases cumplen (interfaces), jerarquías cerradas que el compilador conoce de memoria (`sealed`), funciones que agregas a clases que no son tuyas (extension functions) y tipos que protegen tus datos sin costo (`value class`), además de los objetos únicos (`object` y `companion object`).
+En esta carpeta aprendes las herramientas de Kotlin para **modelar con tipos**: contratos que varias clases cumplen (interfaces), jerarquías cerradas que el compilador conoce de memoria (`sealed`), funciones que agregas a clases que no son tuyas (extension functions) y tipos que protegen tus datos sin costo (`value class`), los objetos únicos (`object` y `companion object`) y los genéricos (`<T>`), para escribir lógica que sirve con cualquier tipo.
 
 -----
 
@@ -18,10 +18,11 @@ Las lecciones se apoyan una en la otra, así que conviene leerlas en este orden:
 
 | Lección | Qué aprendes | Qué necesitas saber antes |
 | --- | --- | --- |
-| [1. Herencia e interfaces](01-herencia-e-interfaces.md) | `open`, `abstract`, `override`, interfaces, polimorfismo y `fun interface` | Clases |
-| [2. Clases e interfaces selladas](02-sealed.md) | `sealed class`, `sealed interface`, `data object` y `when` exhaustivo | Herencia, interfaces y enums |
+| [1. Herencia e interfaces](01-herencia-e-interfaces.md) | `open`, `abstract`, `override`, interfaces, polimorfismo, composición y `fun interface` | Clases |
+| [2. Clases e interfaces selladas](02-sealed.md) | `sealed class`, `sealed interface`, `data object`, `when` exhaustivo y acciones → estados de UI | Herencia, interfaces y enums |
 | [3. Extension functions](03-extension-functions.md) | Agregar funciones y propiedades a clases ajenas, y cómo se resuelven | Funciones y clases |
 | [4. `value class`, `object` y `companion object`](04-value-class-y-object.md) | Tipos que envuelven un valor, singletons y funciones "de la clase" | Data classes |
+| [5. Genéricos](05-genericos.md) | `<T>` en interfaces, clases y funciones, restricciones y type erasure | Interfaces y maps |
 
 -----
 
@@ -47,6 +48,10 @@ value class / object   ->  "tipos sin costo y objetos únicos"
    @JvmInline value class PedidoId(val value: String)
    object Configuracion { ... }               // una sola instancia
    companion object { fun desde(...) = ... }  // Pedido.desde(...)
+
+Genéricos              ->  "escribir la lógica una vez, para cualquier tipo"
+   interface Repository<T> { fun buscarPorId(id: String): T? }
+   class InMemoryRepository<T : Identificable> : Repository<T> { ... }
 ```
 
 -----
