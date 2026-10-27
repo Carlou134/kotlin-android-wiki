@@ -30,8 +30,9 @@ Cada carpeta es una etapa con su propio `README.md` (orden de lectura y mapa de 
 | [18. Observabilidad](18-observabilidad/README.md) | Logging estructurado, correlation ID, métricas |
 | [19. Testing](19-testing/README.md) | Kotest, MockK, Testcontainers, `testApplication`, calidad |
 | [20. Build y DevOps](20-build-y-devops/README.md) | Gradle, convention plugins, Docker, Git, CI |
+| [21. Jetpack Compose](21-jetpack-compose/README.md) | Enfoque declarativo, configuración con Kotlin 2.x, Compose Compiler y KSP |
 
-Las etapas de Android (Compose, Room, WorkManager) continúan desde `21-...`.
+Las etapas de Android siguen desde aquí (Room, WorkManager y más).
 
 ---
 

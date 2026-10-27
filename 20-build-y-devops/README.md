@@ -71,4 +71,4 @@ GitLab CI       ->  "cada cambio, verificado"
 
 ## Después de esta carpeta
 
-Con esta etapa terminas el recorrido de backend. Lo que sigue en la wiki es Android, desde `21-...`. Vuelve al índice: [README principal](../README.md).
+Con esta etapa terminas el recorrido de backend. Lo que sigue en la wiki es Android: [21. Jetpack Compose](../21-jetpack-compose/README.md). Vuelve al índice: [README principal](../README.md).
