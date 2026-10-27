@@ -16,9 +16,13 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **Compose Multiplatform.** Variante de Compose que permite usar el mismo modelo de UI en Android, iOS, escritorio y web.
 
+**Composición (fase).** Primera fase de Compose: ejecuta los composables y arma el árbol de UI. La recomposición repite esta fase.
+
 **Declarativo.** Estilo en el que describes el resultado según el estado, y el framework se encarga de actualizar la pantalla.
 
 **Delegación de propiedades (`by`).** Sintaxis de Kotlin que redirige las lecturas y escrituras de una variable a otro objeto. Con estado de Compose necesita importar `getValue` y `setValue`.
+
+**Dibujo (fase).** Tercera fase de Compose: pinta en pantalla los nodos ya medidos y ubicados.
 
 **Downloadable fonts.** Fuentes que se descargan en tiempo de ejecución desde Google Fonts, vía Google Play Services, en lugar de venir dentro de la app. Necesitan el certificado `font_certs.xml`.
 
@@ -30,6 +34,8 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **Emulador.** Un dispositivo Android virtual que corre en tu PC.
 
+**Estabilidad.** Si Compose puede comparar un parámetro con su valor anterior. Primitivos, `String`, lambdas y data classes con `val` estables son estables.
+
 **Estado (state).** Los datos que determinan qué muestra la pantalla en un momento dado.
 
 **Gradle Sync.** Cuando Android Studio lee los archivos de Gradle y arma el modelo del proyecto.
@@ -39,6 +45,10 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 **Jetpack Compose.** La herramienta oficial de Google para construir interfaces Android de forma declarativa en Kotlin.
 
 **KSP (Kotlin Symbol Processing).** Procesador de anotaciones que genera código al compilar. Lo usan Room y Hilt; su versión debe ser compatible con la de Kotlin.
+
+**Layout (fase).** Segunda fase de Compose: cada nodo mide a sus hijos, decide su tamaño y los ubica en x, y.
+
+**Layout Inspector.** Herramienta de Android Studio que muestra el árbol de UI y, con *Show Recomposition Counts*, cuántas veces se recompone o se salta cada composable.
 
 **Material 3.** El sistema de diseño actual de Google y el que usan por defecto los componentes de Compose (`androidx.compose.material3`).
 
@@ -58,11 +68,17 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **`R`.** Clase que el build genera a partir de los recursos (`res/`). Vive en el paquete raíz de la app, así que desde otros paquetes hay que importarla.
 
+**Recomposición saltada (skip).** Cuando Compose no vuelve a ejecutar un composable porque sus parámetros no cambiaron.
+
 **Recomposición.** Cuando el estado cambia, Compose vuelve a ejecutar los composables afectados para actualizar la pantalla.
 
 **`remember`.** Guarda un valor entre recomposiciones. No sobrevive a la rotación; para eso está `rememberSaveable`.
 
 **`Row` / `Column` / `Box`.** Layouts básicos: hijos en horizontal, en vertical o apilados uno encima de otro.
+
+**State hoisting.** Subir el estado al padre: los hijos reciben el valor que leen y lambdas para modificarlo. El estado baja, los eventos suben.
+
+**Strong skipping mode.** Modo del compilador de Compose, activo por defecto desde Kotlin 2.0.20, que permite saltar composables con parámetros inestables y recuerda las lambdas automáticamente.
 
 **Tipografía (escala).** Las 5 familias de estilos de texto de Material 3 (display, headline, title, body, label), cada una en Large, Medium y Small.
 

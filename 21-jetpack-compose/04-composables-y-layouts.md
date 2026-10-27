@@ -281,4 +281,4 @@ Diferencias que importan:
 
 ## Siguiente lección
 
-Próximamente.
+[5. Fases de Compose y recomposición](05-fases-y-recomposicion.md): cómo pinta Compose y cómo evitar recomponer de más.

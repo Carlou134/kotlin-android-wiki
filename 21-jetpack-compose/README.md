@@ -26,6 +26,7 @@ Si en algún momento aparece una palabra que no conoces, búscala en el [Glosari
 | [2. Configuración del proyecto](02-configuracion-del-proyecto.md) | Crear el proyecto, Kotlin 2.x, el plugin Compose Compiler, KSP y verificar en el emulador | Version catalog |
 | [3. Tema con Material 3](03-tema-con-material-3.md) | Tokens de color, escala tipográfica, Material Theme Builder, Google Fonts y modo claro/oscuro | Configuración del proyecto |
 | [4. Composables, modifiers y layouts](04-composables-y-layouts.md) | `@Composable`, la regla del modifier, `@Preview`, estado con `remember`, `Row`/`Column`, íconos y `@PreviewParameter` | Tema con Material 3 |
+| [5. Fases de Compose y recomposición](05-fases-y-recomposicion.md) | Composición, layout y dibujo; quién se recompone, state hoisting, estabilidad y Layout Inspector | Composables y estado |
 
 -----
 
@@ -54,6 +55,11 @@ Composables (Lego)        ->  "piezas chicas que se apilan"
    Modifier.background(...).padding(...)   ← el orden importa
    var x by remember { mutableStateOf(...) }  ->  cambia x -> recompone
    Row (horizontal) · Column (vertical) · Box (encimados)
+
+Recomposición              ->  "se recompone quien LEE el estado"
+   composición -> layout -> dibujo
+   padre: var x by remember {...}  ->  hijo A(valor = x) · hijo B(onClick = { x = ... })
+   el estado baja, los eventos suben · medir con Layout Inspector
 ```
 
 -----
