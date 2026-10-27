@@ -24,6 +24,7 @@ Si en algún momento aparece una palabra que no conoces, búscala en el [Glosari
 | --- | --- | --- |
 | [1. Qué es Jetpack Compose](01-que-es-compose.md) | Enfoque declarativo vs imperativo, por qué Compose es el estándar, qué app vas a construir | Kotlin básico |
 | [2. Configuración del proyecto](02-configuracion-del-proyecto.md) | Crear el proyecto, Kotlin 2.x, el plugin Compose Compiler, KSP y verificar en el emulador | Version catalog |
+| [3. Tema con Material 3](03-tema-con-material-3.md) | Tokens de color, escala tipográfica, Material Theme Builder, Google Fonts y modo claro/oscuro | Configuración del proyecto |
 
 -----
 
@@ -41,6 +42,11 @@ Proyecto                  ->  "versiones alineadas o nada compila"
    libs.versions.toml: kotlin = "2.x"   ->  compose-compiler usa la MISMA versión
    ksp debe ser compatible con kotlin
    build.gradle.kts raíz: apply false · app: alias(libs.plugins.compose.compiler)
+
+Tema (Material 3)         ->  "el sistema de diseño, definido una vez"
+   colorScheme: primary/onPrimary · surface/onSurface · error/onError
+   typography: display > headline > title > body > label (Large/Medium/Small)
+   TodoAppTheme { ... }  ->  lightScheme o darkScheme según isSystemInDarkTheme()
 ```
 
 -----
@@ -61,9 +67,11 @@ Proyecto                  ->  "versiones alineadas o nada compila"
 * [Compose Compiler Gradle plugin](https://developer.android.com/develop/ui/compose/compiler)
 * [Compatibilidad Compose ↔ Kotlin](https://developer.android.com/jetpack/androidx/releases/compose-kotlin)
 * [Releases de KSP](https://github.com/google/ksp/releases)
+* [Material 3 en Compose](https://developer.android.com/develop/ui/compose/designsystems/material3)
+* [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/)
 
 -----
 
 ## Después de esta carpeta
 
-Lo siguiente es darle identidad visual a la app: temas, colores y tipografía con Material 3. Vuelve al índice: [README principal](../README.md).
+La etapa sigue creciendo a medida que avanza el curso. Vuelve al índice: [README principal](../README.md).

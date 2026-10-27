@@ -150,4 +150,4 @@ Después de cada cambio: **Sync Now**.
 
 ## Siguiente lección
 
-Temas, colores y tipografía con Material 3 (próximamente).
+[3. Tema con Material 3](03-tema-con-material-3.md): colores, tipografía y modo claro/oscuro.
