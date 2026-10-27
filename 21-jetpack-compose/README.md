@@ -25,6 +25,7 @@ Si en algún momento aparece una palabra que no conoces, búscala en el [Glosari
 | [1. Qué es Jetpack Compose](01-que-es-compose.md) | Enfoque declarativo vs imperativo, por qué Compose es el estándar, qué app vas a construir | Kotlin básico |
 | [2. Configuración del proyecto](02-configuracion-del-proyecto.md) | Crear el proyecto, Kotlin 2.x, el plugin Compose Compiler, KSP y verificar en el emulador | Version catalog |
 | [3. Tema con Material 3](03-tema-con-material-3.md) | Tokens de color, escala tipográfica, Material Theme Builder, Google Fonts y modo claro/oscuro | Configuración del proyecto |
+| [4. Composables, modifiers y layouts](04-composables-y-layouts.md) | `@Composable`, la regla del modifier, `@Preview`, estado con `remember`, `Row`/`Column`, íconos y `@PreviewParameter` | Tema con Material 3 |
 
 -----
 
@@ -47,6 +48,12 @@ Tema (Material 3)         ->  "el sistema de diseño, definido una vez"
    colorScheme: primary/onPrimary · surface/onSurface · error/onError
    typography: display > headline > title > body > label (Large/Medium/Small)
    TodoAppTheme { ... }  ->  lightScheme o darkScheme según isSystemInDarkTheme()
+
+Composables (Lego)        ->  "piezas chicas que se apilan"
+   @Composable fun Pieza(modifier: Modifier = Modifier)
+   Modifier.background(...).padding(...)   ← el orden importa
+   var x by remember { mutableStateOf(...) }  ->  cambia x -> recompone
+   Row (horizontal) · Column (vertical) · Box (encimados)
 ```
 
 -----
