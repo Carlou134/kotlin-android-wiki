@@ -23,6 +23,8 @@ Las lecciones se apoyan una en la otra, así que conviene leerlas en este orden:
 | [3. `inline`](03-inline.md) | El costo de las lambdas, `return` no local, etiquetas, `noinline`, `crossinline` y `reified` | Funciones de orden superior |
 | [4. Callbacks](04-callbacks.md) | `onSuccess` / `onError`, `onFound` / `onNotFound`, `_` para parámetros ignorados y el límite del callback hell | Funciones de orden superior |
 
+Cuando termines las cuatro, practica con los [Ejercicios](Ejercicios.md): 11 guiados, 3 retos y un checkpoint, con soluciones ejecutables.
+
 -----
 
 ## El mapa completo en una mirada

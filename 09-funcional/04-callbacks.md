@@ -176,4 +176,4 @@ suspend fun procesar(id: String) {
 
 ## Siguiente lección
 
-Terminaste la programación funcional. Lo próximo es [Corrutinas](../10-corrutinas/README.md), que resuelven el callback hell. Vuelve al índice: [README principal](../README.md).
+Terminaste la programación funcional. Antes de seguir, practica con los [Ejercicios](Ejercicios.md). Lo próximo es [Corrutinas](../10-corrutinas/README.md), que resuelven el callback hell. Vuelve al índice: [README principal](../README.md).
