@@ -140,4 +140,4 @@ launch {
 
 ## Siguiente lección
 
-Terminaste las corrutinas. Vuelve al índice: [README principal](../README.md).
+Terminaste las corrutinas. Antes de seguir, practica con los [Ejercicios](Ejercicios.md). Lo próximo es [Serialización y tiempo](../11-serializacion-y-tiempo/README.md). Vuelve al índice: [README principal](../README.md).

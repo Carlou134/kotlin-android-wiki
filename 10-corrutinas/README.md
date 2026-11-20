@@ -23,6 +23,8 @@ Las lecciones se apoyan una en la otra, así que conviene leerlas en este orden:
 | [3. Concurrencia estructurada](03-concurrencia-estructurada.md) | Padres e hijos, cancelación cooperativa, `SupervisorJob`, `withTimeout` y manejo de errores | Scopes y excepciones |
 | [4. Jobs programados](04-jobs-programados.md) | Tareas periódicas en un servidor Ktor: ciclo de vida, solapamiento y varias instancias | Concurrencia estructurada |
 
+Cuando termines las cuatro, practica con los [Ejercicios](Ejercicios.md): 11 guiados, 3 retos y un checkpoint, con soluciones ejecutables.
+
 -----
 
 ## El mapa completo en una mirada
